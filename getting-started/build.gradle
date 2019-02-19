@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'org.jboss.shamrock.gradle.build.plugin'
+
+
+group = 'org.acme'
+version = '1.0-SNAPSHOT'
+
+description = """"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+buildscript {
+    repositories {
+        // maven { url "file:///home/vorburger/.m2/repo-protean/" } // TODO remove
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        //classpath 'se.thinkcode.gradle:demoPlugin:1.0.0-SNAPSHOT'
+        classpath 'org.jboss.shamrock:shamrock-gradle-plugin:1.0.0.Alpha1-SNAPSHOT'
+    }
+}
+
+
+repositories {
+     mavenLocal()
+     mavenCentral()
+     maven { url "http://repository.jboss.org/nexus/content/groups/public/" }
+     maven { url "http://repo.maven.apache.org/maven2" }
+     maven { url "http://ec2-18-234-117-118.compute-1.amazonaws.com:8081/nexus/content/repositories/releases/" }
+     maven { url "http://ec2-18-234-117-118.compute-1.amazonaws.com:8081/nexus/content/repositories/snapshots/" }
+}
+dependencies {
+    implementation gradleApi()
+    testCompile group: 'org.jboss.shamrock', name: 'shamrock-junit5', version:'1.0.0.Alpha1-SNAPSHOT'
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version:'3.3.0'
+    compileOnly group: 'org.jboss.shamrock', name: 'shamrock-jaxrs-deployment', version:'1.0.0.Alpha1-SNAPSHOT'
+    compileOnly group: 'org.jboss.shamrock', name: 'shamrock-core-deployment', version:'1.0.0.Alpha1-SNAPSHOT'
+}
