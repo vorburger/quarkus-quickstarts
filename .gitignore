@@ -13,6 +13,7 @@ buildNumber.properties
 
 .gradle/
 build/
+.gradletasknamecache
 
 *.log
 graph-output.dot
