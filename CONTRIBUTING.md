@@ -56,9 +56,9 @@ mvn clean verify -Pnative
 
 ## Build with Gradle
 
-Clone like above, and build it using:
+Clone like above, and build e.g. `getting-started` using:
 
-    gradle build-shamrock
+    ../gradlew quarkus-build
 
 You'll find the `*-runner.jar` in `build` (not `build/libs`).
 
