@@ -1,6 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'maven'
-apply plugin: 'org.jboss.shamrock.gradle.build.plugin'
+apply plugin: 'org.jboss.shamrock.gradle.plugin'
 
 buildscript {
     repositories {
@@ -22,9 +22,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly group: 'org.jboss.shamrock', name: 'shamrock-jaxrs-deployment', version:'1.0.0.Alpha1-SNAPSHOT'
-    compileOnly group: 'org.jboss.shamrock', name: 'shamrock-core-deployment', version:'1.0.0.Alpha1-SNAPSHOT'
+    compileOnly group: 'org.jboss.shamrock', name: 'shamrock-jaxrs-deployment', version:'0.9.1'
+    compileOnly group: 'org.jboss.shamrock', name: 'shamrock-core-deployment', version:'0.9.1'
 
-    testCompile group: 'org.jboss.shamrock', name: 'shamrock-junit5', version:'1.0.0.Alpha1-SNAPSHOT'
+    testCompile group: 'org.jboss.shamrock', name: 'shamrock-junit5', version:'0.9.1'
     testCompile group: 'io.rest-assured', name: 'rest-assured', version:'3.3.0'
 }
