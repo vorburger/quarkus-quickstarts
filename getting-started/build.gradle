@@ -3,21 +3,23 @@ apply plugin: 'io.quarkus.gradle.plugin'
 
 buildscript {
     repositories {
+        mavenLocal()
         mavenCentral()
     }
     dependencies {
-        classpath 'io.quarkus:quarkus-gradle-plugin:0.11.0'
+        classpath 'io.quarkus:quarkus-gradle-plugin:999-SNAPSHOT'
     }
 }
 
 repositories {
+     mavenLocal()
      mavenCentral()
      maven { url 'http://repository.jboss.org/nexus/content/groups/public' }
 }
 
 dependencies {
-    compileOnly group: 'io.quarkus', name: 'quarkus-resteasy', version:'0.11.0'
+    compileOnly group: 'io.quarkus', name: 'quarkus-resteasy', version:'999-SNAPSHOT'
 
-    testCompile group: 'io.quarkus', name: 'quarkus-junit5', version:'0.11.0'
+    testCompile group: 'io.quarkus', name: 'quarkus-junit5', version:'999-SNAPSHOT'
     testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
 }
