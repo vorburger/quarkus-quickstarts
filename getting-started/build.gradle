@@ -1,30 +1,23 @@
 apply plugin: 'java'
-apply plugin: 'maven'
-apply plugin: 'org.jboss.shamrock.gradle.plugin'
+apply plugin: 'io.quarkus.gradle.plugin'
 
 buildscript {
     repositories {
-        mavenLocal()
         mavenCentral()
     }
     dependencies {
-        classpath 'org.jboss.shamrock:shamrock-gradle-plugin:1.0.0.Alpha1-SNAPSHOT'
+        classpath 'io.quarkus:quarkus-gradle-plugin:0.11.0'
     }
 }
 
 repositories {
-     mavenLocal()
      mavenCentral()
-     maven { url "http://repository.jboss.org/nexus/content/groups/public/" }
-     maven { url "http://repo.maven.apache.org/maven2" }
-     maven { url "http://ec2-18-234-117-118.compute-1.amazonaws.com:8081/nexus/content/repositories/releases/" }
-     maven { url "http://ec2-18-234-117-118.compute-1.amazonaws.com:8081/nexus/content/repositories/snapshots/" }
+     maven { url 'http://repository.jboss.org/nexus/content/groups/public' }
 }
 
 dependencies {
-    compileOnly group: 'org.jboss.shamrock', name: 'shamrock-jaxrs-deployment', version:'0.9.1'
-    compileOnly group: 'org.jboss.shamrock', name: 'shamrock-core-deployment', version:'0.9.1'
+    compileOnly group: 'io.quarkus', name: 'quarkus-resteasy', version:'0.11.0'
 
-    testCompile group: 'org.jboss.shamrock', name: 'shamrock-junit5', version:'0.9.1'
-    testCompile group: 'io.rest-assured', name: 'rest-assured', version:'3.3.0'
+    testCompile group: 'io.quarkus', name: 'quarkus-junit5', version:'0.11.0'
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.3.0'
 }
