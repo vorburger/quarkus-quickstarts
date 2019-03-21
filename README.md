@@ -19,6 +19,9 @@ See [CONTRIBUTING](CONTRIBUTING.md) for how to build these examples:
 * [Validation with Hibernate Validator](./validation): How to use Hibernate Validator/Bean Validation in your REST services
 * [REST Client](./rest-client): How to use MicroProfile's REST Client
 * [OpenTracing and Jaeger](./using-opentracing): How to use MicroProfile OpenTracing and Jaeger to monitor application performances
+* [MicroProfile Health](./microprofile-health): How to use MicroProfile Health
+* [MicroProfile Fault Tolerance](./microprofile-fault-tolerance): How to use MicroProfile Fault Tolerance
+* [MicroProfile Metrics](./microprofile-metrics): How to use MicroProfile Metrics
 * [Spring DI compatibility layer](./using-spring-di): How to use our Spring Dependency Injection compatibility layer
 * [Infinispan Client](./infinispan-client): How to use Infinispan Client. Covers creating caches and simple get/put.
 

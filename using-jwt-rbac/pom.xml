@@ -7,7 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <properties>
     <surefire-plugin.version>2.22.0</surefire-plugin.version>
-    <quarkus.version>0.11.0</quarkus.version>
+    <quarkus.version>0.12.0</quarkus.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -35,6 +35,7 @@
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-junit5</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.rest-assured</groupId>
