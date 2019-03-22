@@ -1,6 +1,3 @@
-JAVA_APP_JAR=*-runner.jar
-
-ARTIFACT_COPY_ARGS="-p -r lib/ $JAVA_APP_JAR"
-# This ^^^ is required because without <uberJar>true we need all lib/** in /deployments/
+S2I_SOURCE_DEPLOYMENTS_FILTER=*-runner.jar lib/*.jar
 
 JAVA_OPTIONS=-Dquarkus.http.host=0.0.0.0
