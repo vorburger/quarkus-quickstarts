@@ -1,5 +1,5 @@
-JAVA_APP_JAR=quarkus-quickstart.jar
+JAVA_APP_JAR=quarkus-quickstart-runner.jar
 
-ARTIFACT_COPY_ARGS=-p -r lib/ quarkus-quickstart.jar
+ARTIFACT_COPY_ARGS=-p -r lib/ quarkus-quickstart-runner.jar
 
 JAVA_OPTIONS=-Dquarkus.http.host=0.0.0.0
